@@ -1,0 +1,94 @@
+.colorIt{
+    background: blanchedalmond;
+}
+.tag-line{
+    font-size: 38px;
+}
+#delete-form{
+    display: inline;
+}
+.photo{
+    width: 200px;
+    height:200px;
+    margin: 1.66%;
+    padding: 2% 5% 2% 5%;
+    
+}
+.photoOnCard{
+    width: 300px;
+    height:280px;
+    margin: 1.66%;
+    padding: 2% 5% 2% 5%;
+    align-self: center;
+    
+}
+.centerIt{
+    text-align: center;
+    
+}
+.profileCard{
+    width: 300px;
+    height:450px;
+    border: 3px solid blanchedalmond;
+    align-items: center;
+    text-align: center;
+    margin: 2%;
+}
+.profileCard:hover{
+    border: 6px solid rgb(208, 173, 119);
+}
+.listShow{
+    width: 600px ;
+    height: 225px;
+    border: 3px solid blanchedalmond;
+    margin: 4%;
+}
+.listShow:hover{
+  border: 6px solid rgb(208, 173, 119);
+}
+.addLink{
+    width:100px;
+    height: 110px;
+    background-color: antiquewhite;
+    border: 3px solid blanchedalmond;
+    color: black;
+    text-align: center;
+    margin-top: 55px;
+    float: right;
+    
+}
+.sizeIt{
+    font-size: 40px;
+    margin: 20% 20% 3% 20%;
+    font-weight: 900;
+}
+.addLink:hover{
+  background-color: whitesmoke;
+  
+}
+.exploreLink{
+    width:150px;
+    height: 100px;
+    background-color: antiquewhite;
+    border: 3px solid blanchedalmond;
+    color: black;
+    text-align: center;
+    margin-top: 55px;
+    float: right;
+}
+.requestShow{
+    width: 500px;
+    height:450px;
+    border: 3px solid blanchedalmond;
+    align-items: center;
+    text-align: center;
+    margin: 0 5% 0 5% ;
+}
+.showAll{
+    width: 260px;
+    height:450px;
+    border: 3px solid blanchedalmond;
+    align-items: center;
+    text-align: center;
+    margin: 0 5% 0 5% ; 
+}

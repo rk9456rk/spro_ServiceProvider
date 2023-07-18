@@ -1,0 +1,49 @@
+<%- include('../partials/header1') %>
+<div class="container">
+<div class="row">
+    <div class="col-lg-3">
+    <h1 class="centerIt"> Profile </h1>
+    <div class="profileCard">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" 
+        class="photo" alt=" profile Photo">
+        <h3><%= currentUser.username%></h3>
+        <h4><%= currentUser.usertype%></h4>
+        <h4><%= currentUser.userStatus%></h4>
+        <h5><%= currentUser.userPower%></h5>
+        <h5> <a href="/profile/myRequest">My Request</a></h5>
+        <h5> <a href="/profile/requestForMe">Request For Me</a></h5>
+    </div>
+    </div>
+    <!----
+    <div class="col-lg-6" >
+       <div class="listShow">
+         <h1 class="centerIt">Service Profile Created</h1>
+         <div class="addLink">
+            <a href="/new/serviceProvider"><i class="fa-solid fa-plus red sizeIt"></i></a>
+            <h5>Create More</h5>
+        </div>
+          
+       </div>
+       <div class="listShow">
+        <h1 class="centerIt"> Article Created </h1>
+        <div class="addLink">
+            <a href="/businessArticle/new"><i class="fa-solid fa-plus red sizeIt"></i></a>
+            <h5>Create More</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+       <div class="exploreLink">
+
+       </div>
+    </div>---->
+    <%if(currentUser.usertype==="serviceProvider"){%>
+     <%-include('./provider')%>
+    <%}else if(currentUser.usertype==="customer"){%>
+    <%-include('./customer')%>
+    <%}%>
+</div>
+    
+</div>
+
+<%- include('../partials/footer1') %>

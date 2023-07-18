@@ -1,0 +1,16 @@
+<%- include('../partials/header1') %>
+<h1> Sign Up</h1>
+
+<form action="/register" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="text" name="password" placeholder="password">
+    <label for="userType"> choose role</label>
+    <select name="userType" id="userType">
+        <option value="customer">customer</option>
+        <option value="admin"> admin</option>
+        <option value="support">support</option>
+        <option value="serviceProvider">serviceProvider</option>
+    </select>
+    <button> Submit</button>
+</form>
+<%- include('../partials/footer1') %>

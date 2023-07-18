@@ -1,0 +1,40 @@
+<%- include('../partials/header2') %>
+
+<div class="ui main text container">
+    <div class="ui huge header">Business Related </div>
+        <div class="ui top attached segment">
+            <div class="ui divided items">
+                <%articles.forEach((article)=>{%>
+                    <div class="item">
+                      <div class="image">
+                        <img src="<%=article.image%>" alt="image">
+                      </div>
+                      <div class="content">
+                          <a class="header" href="/businessArticle/show/<%=article._id%>">
+                            <h2> <%=article.title%></h2>
+                          </a>
+                          <div class="meta">
+                            <span><%=article.created.toDateString() %></span>
+                          </div>
+                          <div class="description">
+                            <p><%=String(article.body).substring(0, 90)%>....</p>
+                         </div>
+                         <div class="extra">
+                            <a class="ui floated basic blue button" href="/businessArticle/show/<%=article._id%>">
+                                Read More
+                                <i class="right chevron icon"></i>
+                              </a>
+                         </div>
+                      </div>
+                     
+                   
+                    
+                   
+                    </div>
+                <%})%>
+            </div>
+        </div>
+   
+</div>
+
+<%- include('../partials/footer2') %>

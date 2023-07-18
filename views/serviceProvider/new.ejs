@@ -1,0 +1,35 @@
+<%- include('../partials/header1') %>
+
+<div class="container">
+    <div class=" row">
+<h1 style="text-align: center;"> create new service Provider</h1>
+ <div style="width: 30%; margin: 25px auto;">
+<form action="/createServiceProvider" method="post">
+    <div class="mb-3">
+        <label for="name-field" class="form-label">name</label>
+        <input id="name-field" class="form-control" type="text" name="name" placeholder="name" label="name">
+    </div>
+   
+    <div class="mb-3">
+        <input  class="form-control" type="text" name="profilePhoto"  placeholder=" URL">
+    </div>
+    
+    <div class="mb-3">
+        <input class="form-control"  type="text" name="contactNumber" placeholder="contactNumber">
+    </div>
+    
+    <div class="mb-3"> 
+        <input class="form-control"  type="text" name="serviceType"   placeholder="serviceType">
+    </div>
+    <div class="mb-3"> 
+        <input class="form-control"  type="text" name="description"   placeholder="description">
+    </div>
+    <div class="mb-3 d-grid gap-2">
+        <button class="btn btn-lg btn-primary btn-block"> Submit!</button>
+    </div>
+    
+</form>
+</div>
+    </div>
+</div>
+<%- include('../partials/footer1') %>

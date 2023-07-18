@@ -1,0 +1,35 @@
+<%- include('../partials/header2') %>
+
+<div class="ui main text container segment"> 
+    <div class="ui huge header"><%=article.title%></div>
+  
+    <div class="ui top attached ">
+         <div class="item">
+            <img class="ui centered image"src="<%=article.image%>" alt="image">
+            <div class="content floated right row">
+                <span id="timeCreated" class="item inverted float right">
+                  <%=article.created.toDateString() %></span>
+                <a class="right floated author floated" >
+                    <i class="user secret icon"></i> <%=article.author.username%>
+                </a>
+            </div>
+          
+           
+              
+            <div>
+                <div class="description">
+                    <p><%-article.body%></p>
+                </div>
+            </div>
+
+            <% if(currentUser && article.author.id.equals(currentUser._id)){%>
+            <a class="ui orange basic button"href="/businessArticle/edit/<%=article._id%>">edit</a>
+            <form id="deleteButton"action="/businessArticle/delete/<%=article._id%>?_method=DELETE" method="post">
+                <button class="ui red basic button"> Delete</button>
+            </form>
+            <%}%>
+         </div>
+    </div>
+   
+</div>
+<%- include('../partials/footer2') %>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Article</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.css">
+    <link rel="stylesheet" href="/styleSheet/businessArticle.css">
+</head>
+<body>
+    
+    <div class="ui fixed inverted menu colorIt">
+        <div class="ui container colorIt ">
+
+            <div class="header item colorIt">
+              <i class="code icon"></i> Blog site
+            </div>
+        </div>
+              <a  href="/" class="item">
+                Home
+              </a>
+              <a  href="/businessArticle" class="item">
+                All
+              </a>
+              <a href="/businessArticle/new" class="item">
+                 New Article
+              </a>
+              <%if(!currentUser){%>
+              <a class="item" href="/register">SignUp<i class="fa-solid fa-user-plus"></i></a>
+              <a class="item" href="/login">Login<i class="fa-solid fa-user"></i></a>
+             <% }else{%>
+              <a class="item" href="#"><i class="fa-solid fa-user"></i><%=currentUser.username%></a>
+              <a class="item" href="/logout">LogOut<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+             <% } %>
+            </div>

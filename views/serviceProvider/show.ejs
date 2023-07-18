@@ -1,0 +1,98 @@
+<%- include('../partials/header1') %>
+
+<div class="container ">
+    <div class="row">
+        <div class="col-md-3 " >
+            <p class="lead"> ServiceProvider</p>
+            <div class="list-group">
+                <li class="list-group-item active"> info 1</li>
+                <li class="list-group-item"> info</li>
+                <li class="list-group-item"> info</li>
+            </div>
+        </div>
+
+       
+        <div class="col-md-9">
+          <div class="row">
+              <div class="col-md-10">
+              <div class="card mb-3">
+                <img class="rounded d-block photoOnCard"
+                 src="<%=serviceProvider.profilePhoto%>" alt="<%=serviceProvider.profilePhoto%> photo">
+                <div class="card-body">
+                  <h4 class="card-title">
+                     <a><%= serviceProvider.name%></a> 
+                     <span class="float-end"> <%= serviceProvider.serviceType%></span>
+                  </h4>
+                  <p class="card-text"><%= serviceProvider.description%></p>
+                  <!---<p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>-->
+                  <p class="card-text"><small class="text-body-secondary">created by <%=serviceProvider.username%></small></p>
+                 <% if(currentUser && serviceProvider._id.equals(currentUser._id)){%>--->
+                  <p> <a  class="btn btn-warning" href="/serviceProvider/<%=serviceProvider._id%>/edit">Edit</a>
+                    <a  class="btn btn-danger" href="/serviceProvider/<%=serviceProvider._id%>/delete">Delete</a>
+                      
+                        <!---<form class="float-end" action="/serviceProvider/<%=serviceProvider._id%>?_method=DELETE" method="post">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>---->
+                  </p>
+
+                 <%}%>
+                  <div class="text-end">
+                    <a  class="btn btn-success" href="/request/new/<%=serviceProvider._id%>">request</a>
+                  </div>
+                </div>
+               </div>
+              </div>
+              <div class="col-md-2  colorIt" >
+                  <p class="tag-line"> fast 
+                      easy
+                      to
+                      find
+                      service
+                  </p>
+              </div>
+           </div>
+            <!-----
+            <div class="thumbnail">
+                <img class="rounded mx-auto d-block"
+                 src="<%=serviceProvider.profilePhoto%>" alt="<%=serviceProvider.profilePhoto%> photo">
+                <div class="caption-full">
+                    <h4 class="d-md-flex justify-content-md-end"><%= serviceProvider.serviceType%></h4>
+                    <h4> <a><%= serviceProvider.name%></a></h4>
+                    <p> <%= serviceProvider.description%></p>
+
+                </div>
+            </div>---->
+            <div class="card">
+                <div class="card-header text-end">
+                    <p> <a class="btn btn-success" href="/serviceProvider/<%=serviceProvider._id%>/review/new">
+                        add new comment</a></p>
+                </div>
+                <%serviceProvider.reviews.forEach((review)=>{%>
+                    <div class="row">
+                        <div class="card-body">
+                            <div class="col-md-12">
+                                <%=review.author.username%>
+                                <span class="float-end"> <%=review.created.toDateString()%></span>
+                                <p><%=review.text%></p>
+                            </div>
+                            <%if(currentUser&& review.author.id.equals(currentUser._id)){%>
+                            <a href="/serviceProvider/<%=serviceProvider._id%>/review/<%=review._id%>/edit"
+                                class="btn btn-warning">
+                               edit
+                            </a>
+                            <a href="/serviceProvider/<%=serviceProvider._id%>/review/<%=review._id%>/delete"
+                                class="btn btn-danger">
+                               delete
+                            </a>
+                             <%}%>
+                        </div>
+                    </div>
+                    
+                <%});%>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../partials/footer1') %>

@@ -1,0 +1,62 @@
+<%- include('../partials/header1') %>
+
+<div class="container colorIt">
+ <header class="jumbotron">
+     <div class="container">
+        <h1> Meet Our Service Provider</h1>
+        <p> find your needy service as soon as possible</p>
+     </div>
+   
+ </header>
+
+  <div class="row">
+    <div class="col-lg-12">
+        <h3> Our service Provider</h3>
+    </div>
+  </div>
+  <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+
+    <%serviceProviders.forEach(function(serviceProvider){ %>
+        
+        <div class="col-md-3 col-sm-6">
+          <div class="card">
+            
+            <img src="<%=serviceProvider.profilePhoto%>" class="rounded mx-auto d-block " alt="Alt"
+            style=" width: 150px;
+                  height: 150px;
+                  float: left;
+                  margin: 1.66%;">
+            
+            
+            <div class="card-body">
+              <div class="card-text">
+                <h4><%=serviceProvider.name%></h4>
+                <p><%= serviceProvider.serviceType%></p>
+                <p> contact: <%=serviceProvider.contactNumber%></p>
+              </div>
+                
+                <p> <a href="/serviceProvider/<%= serviceProvider._id %>" class="btn btn-primary">
+                    see profile</a>
+                </p>
+               
+            </div>
+          </div>
+          <!----
+             <div class="thumbnail">
+                <img src="<%=serviceProvider.profilePhoto%>" alt="profile Photo" 
+                style=" width: 250px;
+                  height: 250px;
+                  float: left;
+                  margin: 1.66%;">
+                <div class="caption">
+                    <h4><%=serviceProvider.name%></h4>
+                    <p> contact: <%=serviceProvider.contactNumber%></p>
+                </div>
+                <p> <a href="/serviceProvider/<%= serviceProvider._id %>" class="btn btn-primary"></a></p>
+             </div>---->
+        </div>
+    <%})%>
+  </div>
+
+</div>
+<%- include('../partials/footer1') %>

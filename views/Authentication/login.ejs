@@ -1,0 +1,15 @@
+<%- include('../partials/header1') %>
+<h1> Login Page</h1>
+
+<form action="/login" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="text" name="password" placeholder="password">
+    <select name="userType" id="userType">
+        <option value="customer">customer</option>
+        <option value="admin"> admin</option>
+        <option value="support">support</option>
+        <option value="serviceProvider">serviceProvider</option>
+    </select>
+    <button> Submit</button>
+</form>
+<%- include('../partials/footer1') %>

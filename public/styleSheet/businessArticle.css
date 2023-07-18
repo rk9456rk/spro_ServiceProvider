@@ -1,0 +1,20 @@
+i.icon{
+    font-size: 2em;
+}
+.ui.inverted.menu {
+    background: blanchedalmond;
+    color: black;
+}
+.ui.inverted.menu .item{
+    color: black;
+}
+.container.main{
+    margin-top: 7.0em;
+}
+#deleteButton{
+    display: inline;
+}
+#timeCreated{
+    display: inline;
+    color: rgb(19, 138, 198);
+}

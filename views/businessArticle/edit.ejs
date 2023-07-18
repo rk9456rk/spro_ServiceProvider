@@ -1,0 +1,23 @@
+<%- include('../partials/header2') %>
+
+<div class="ui main text container segment"> 
+    <div class="ui huge header">Edit <%=article.title%></div>
+     <form class="ui form"action="/businessArticle/edit/<%=article._id%>?_method=PUT" method="post">
+        <div class="field">
+            <label >Title</label>
+            <input type="text" name="article[title]" value="<%=article.title%>">
+        </div>
+        <div class="field">
+            <label >Image (URL)</label>
+            <input type="text" name="article[image]" value="<%=article.image%>">
+        </div>
+        <div class="field">
+            <label >Content</label>
+            <textarea name="article[body]" ><%=article.body%></textarea>
+            
+        </div>
+       
+        <input class="ui green basic button" type="submit">
+     </form>
+</div>
+<%- include('../partials/footer2') %>
