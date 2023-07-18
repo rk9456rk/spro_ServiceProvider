@@ -19,18 +19,20 @@ Also a kind of blog site where user can write and read the article related to bu
 In future many more services and features will be added in this Project
 
 ## Main Page
+![mainPage](https://github.com/rk9456rk/spro_ServiceProvider/assets/62098989/51319a30-20c6-4a80-ab19-a89faf60c615)
 
-![assets\mainPage.png](assets\mainPage.png)
 
 
 ## Service Provider Search Page
-![assets\serviceProvider.png](assets\serviceProvider.png)
+![serviceProvider](https://github.com/rk9456rk/spro_ServiceProvider/assets/62098989/48bcc382-375f-437a-aaf1-d29fc667b3b7)
+
 
 ## Service Provider Profile Page
-![assets\profilePage.png](assets\profilePage.png)
+![profilePage](https://github.com/rk9456rk/spro_ServiceProvider/assets/62098989/3a70001a-ba50-4471-9e09-08e58db643eb)
+
 
 ## user can add reviews also
-![assets\commentPage.png](assets\commentPage.png)
+![commentPage](https://github.com/rk9456rk/spro_ServiceProvider/assets/62098989/572cad02-9554-4d6a-837e-3396412e101a)
 
 ## Article Page
-![assets\articlePage.png](assets\articlePage.png)
+![articlePage](https://github.com/rk9456rk/spro_ServiceProvider/assets/62098989/5ae3c013-b271-4e86-948e-bc6840d68e6f)
