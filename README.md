@@ -6,7 +6,7 @@
 
 
 ## Objective: 
-To create a website the provide service to user[ Customer]
+To create a web app the provide service to user[ Customer]
 
 Service Provider Create there profile and user can request for a service they want.
 
